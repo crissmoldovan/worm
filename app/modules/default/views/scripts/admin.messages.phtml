@@ -1,0 +1,29 @@
+<?php
+$messages = Messages::getAll();
+if (count($messages)){
+	foreach($messages as $message){
+		switch ($message["type"]){
+			case Messages::error:
+				?>
+				<p class="msg error"><?=$message["text"]?></p>
+				<?php 
+			break;
+			case Messages::success:
+				?>
+				<p class="msg done"><?=$message["text"]?></p>
+				<?php
+			break;
+			case Messages::warning:
+				?>
+				<p class="msg warning"><?=$message["text"]?></p>
+				<?php
+			break;
+			default:
+				?>
+				<p class="msg info"><?=$message["text"]?></p>
+				<?php
+			break;
+		}
+	}
+}
+?>

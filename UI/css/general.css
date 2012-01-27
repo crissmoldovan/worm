@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+body {
+    font-family:'lucida grande',tahoma,arial,sans-serif;
+    font-size:11px;
+}
+a {
+    color:#15428B;
+}
+a:link, a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+#header {
+    background: #7F99BE url(../images/layout-browser-hd-bg.gif) repeat-x center;
+}
+#header h1 {
+    font-size: 16px;
+    color: #fff;
+    font-weight: normal;
+    padding: 5px 10px;
+}
+#details-panel{
+	font-family:'lucida grande',tahoma,arial,sans-serif;
+    font-size:11px;
+}
+.default_text{
+	font-family:'lucida grande',tahoma,arial,sans-serif;
+    font-size:11px;
+}
+.logDiv{
+	overflow: auto;
+	width: 90%;
+	height: 200px;
+	border: 1px #99BBE8 solid;
+	background-color: #FFF;
+}

@@ -1,0 +1,17 @@
+[
+	<?php 
+		if (count($this->hosts)) { 
+			foreach($this->hosts as $index => $host){
+				?>
+				{
+			        text:'<?=$host["name"]?>',
+			        id:'<?=$index?>',
+			        icon:'<?=BASE_URL?>/images/icons/database.png',
+			        leaf:true
+			    }
+				<?php
+				if ($index < count($this->hosts)-1) echo ",";
+			}
+		}
+	?>
+]

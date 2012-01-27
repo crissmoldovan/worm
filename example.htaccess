@@ -1,0 +1,15 @@
+SetEnv APPLICATION_ENV criss
+
+RewriteEngine On
+
+RewriteRule ^css/(.*)$ UI/css/$1 [L]
+RewriteRule ^images/(.*)$ UI/images/$1 [L]
+RewriteRule ^js/(.*)$ UI/js/$1 [L]
+
+
+
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]

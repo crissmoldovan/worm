@@ -1,0 +1,80 @@
+<br/>
+<br/>
+<table class="default_text" width="100%" cellpadding="0" cellspacing="0" border="0" style="empty-cells: show;">
+	
+	<tr>
+		<td width="30%" align="right" style="padding-right:5px; border-right: 1px #ccc solid;" >
+			Base Output Path
+		</td>
+		<td width="70%" align="left" style="padding-left:5px; font-weight: bold;" >
+			<span id="default_output_span_<?=$this->host?>"><?=$this->outputPath?></span>
+			<input type="hidden" id="default_output_<?=$this->host?>" name="default_output_<?=$this->host?>" value="<?=$this->outputPath?>" style="width: 300px" disabled="disabled"/>
+		</td>
+	</tr>
+	<tr>
+		<td width="30%" align="right" style="padding-right:5px; border-right: 1px #ccc solid;" >
+			Use Custom Output Path
+		</td>
+		<td width="70%" align="left" style="padding-left:5px; font-weight: bold;" >
+			<input type="checkbox" id="custom_output_chk_<?=$this->host?>" onChange="changeCustomPath(this, '<?=$this->host?>')" />
+			<input type="text" id="custom_output_<?=$this->host?>" name="custom_output_<?=$this->host?>" value="<?=$this->outputPath?>" style="width: 300px" disabled="disabled" onKeyUp="setPaths('<?=$this->host?>')"/>
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="100%" colspan="2">
+		&nbsp;
+		</td>
+	</tr>
+	<tr>
+		<td align="center" colspan="2">
+			<table cellspacing="0" class="x-btn   x-btn-noicon" id="ext-comp-1008" style="width: 75px;">
+				<tbody class="x-btn-small x-btn-icon-small-left">
+					<tr>
+						<td class="x-btn-tl">
+							<i>&nbsp;</i>
+						</td>
+						<td class="x-btn-tc">
+						</td>
+						<td class="x-btn-tr">
+							<i>&nbsp;</i>
+						</td>
+					</tr>
+					<tr>
+						<td class="x-btn-ml">
+							<i>&nbsp;</i>
+						</td>
+						<td class="x-btn-mc">
+							<em unselectable="on" class="">
+							<button type="button" id="ext-gen58" class=" x-btn-text" onClick='generate("<?=$this->host?>")'>Generate</button>
+							</em>
+						</td>
+						<td class="x-btn-mr">
+							<i>&nbsp;</i>
+						</td>
+					</tr>
+					<tr>
+						<td class="x-btn-bl">
+							<i>&nbsp;</i>
+						</td>
+						<td class="x-btn-bc"></td>
+						<td class="x-btn-br">
+							<i>&nbsp;</i>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td align="center" width="100%" colspan="2">
+		&nbsp;
+		</td>
+	</tr>
+	<tr>
+		<td align="center" colspan="2">
+			<div id="log_<?=$this->host?>" class="logDiv">
+			</div>
+		</td>
+	</tr>
+</table>

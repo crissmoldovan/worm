@@ -1,0 +1,18 @@
+<?php
+if (count($this->hosts)){
+?>
+Available connections list:
+
+<?php
+	foreach($this->hosts as $host){
+?>
+
+<?=$host->getUniqueName()?> (<?=$host->getName()?>) : h:<?=$host->getHost()?> p:<?=$host->getPort()?> u:<?=$host->getUser()?> p:<?=$host->getPass()?> s:<?=$host->getSchema()?> c:<?=$host->getConnector()?>
+<?php
+	}	
+}else{
+ echo "NO CONNECTION DEFINED!";
+}
+?>
+
+______

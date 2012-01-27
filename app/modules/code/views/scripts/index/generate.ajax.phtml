@@ -1,0 +1,17 @@
+<table class="default_text" width="100%">
+<?php
+	if (count($this->messageQueue)){
+		foreach($this->messageQueue as $message){
+			?>
+			<tr>
+				<td width="80%" align="left"><?=$message["msg"]?></td>
+				<td width="20%" align="left"><?=$message["status"]?></td>
+			</tr>
+			<?php 
+		}
+	} 
+?>
+</table>
+<hr/>
+Duration: <?=$this->duration?> seconds <br />
+Memory Usage: <?=$this->memory?>
